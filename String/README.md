@@ -46,7 +46,8 @@ streamCP.forEach(out::println);
 
 // Array con los digitos de codigo ascii del string
 int[] arrCP = streamCP.toArray();
-out.println(Arrays.toString(arrCP));
+
+Arrays.toString(arrCP);
 // [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -56,7 +57,7 @@ Este metodo retorna un Objeto _IntStream_ que contiene una lista con el codigo a
 
 ```java
 IntStream chars = msg.chars();
-out.println(Arrays.toString(chars.toArray()));
+Arrays.toString(chars.toArray());
 // [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -69,6 +70,8 @@ Compara 2 cadena y retorna:
 
 **Nota:** Discrimina minusculas y mayusculas
 ```java
-out.println(msg.compareTo("Hola Mundo"));  // -10
-out.println(msg.compareTo("Hello World")); // 0
+msg.compareTo("Hola Mundo");  // -10
+msg.compareTo("Hello World"); // 0
 ```
+
+### compareToIgnoreCase()
