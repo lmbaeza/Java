@@ -184,3 +184,65 @@ StringUtils.isEmpty(null); // true
 "bob".isEmpty();           // false  
 "  bob  ".isEmpty();       // false
 ```
+
+### lastIndexOf(String str) int
+
+Retorna el ultimo indice de la subcadena ingresada
+
+```java
+String msg1 = "Hello World Hello World";
+msg1.lastIndexOf("World"); // 18
+```
+
+### lastIndexOf(char character) int
+
+Retorna el ultimo indice del caracter ingresada
+
+```java
+String msg1 = "Hello World Hello World";
+msg1.lastIndexOf('W'); // 18
+```
+
+       
+### lines() Stream<String>
+
+retorna un array partido en los saltos de linea
+
+```java
+String msg2 = "Hello \nWorld \nHello \nWorld";
+Stream<String> streamLines = msg2.lines();
+
+Object[] streamLinesArr =  streamLines.toArray();
+
+for(Object x: streamLinesArr) {
+    out.print(x.toString() +" <-> ");
+}
+out.println();
+// Hello  <-> World  <-> Hello  <-> World <->
+```
+
+### matches(String regex) boolean
+
+Saber si una subcadena esta en una cadena
+
+```java
+msg.matches(".*\\bHello\\b.*"); // true
+```
+
+### replace(String oldStr, String newStr) String
+
+Reemplazar la subcadena 'Hello' por 'Hola'
+
+```java
+msg.replace("Hello", "Hola"); // Hola World
+```
+
+### replace(char oldChar, char newChar) String
+
+Reemplazar el caracter 'H' por 'h'
+
+```java
+msg.replace('H', 'h'); // hello World
+```
+        
+        
