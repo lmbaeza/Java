@@ -74,4 +74,57 @@ msg.compareTo("Hola Mundo");  // -10
 msg.compareTo("Hello World"); // 0
 ```
 
-### compareToIgnoreCase()
+### compareToIgnoreCase(String anotherString) int
+
+Compara 2 cadena y retorna:
+
+* `0` : si las cadena son iguales
+* `±length` : Si las cadenas son diferentes
+
+**Nota:** No discrimina minusculas y mayusculas
+
+```java
+msg.compareToIgnoreCase("hello world"); // true
+```
+
+### concat(String str) String
+
+Concatena al final del string `msg` la cadena `str`.
+
+```java
+msg.concat(" English"); // Hello World English
+```
+
+### contains(String str) boolean
+
+Saber si una subcadena esta dentro de una cadena
+_retorna:_ true o false segun sea la respuesta
+
+```java
+msg.contains("He"); //true
+```
+
+### endsWith(String str) boolean
+
+Verifica si la subcadena en la que termina en una subcadena en particular.
+
+```java
+msg.endsWith("World"); // true
+```
+
+### equals(String str) boolean
+
+Verificar si 2 cadenas son iguales:
+Retorna: true, false
+
+```java
+msg.equals("Hello World"); // true
+```
+
+### equalsIgnoreCase(String str) String
+
+Verifica si 2 cadenas son iguales sin tener en cuenta minuscula de mayuscula
+
+```java
+msg.equalsIgnoreCase("hello world"); // true
+```
