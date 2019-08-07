@@ -128,3 +128,59 @@ Verifica si 2 cadenas son iguales sin tener en cuenta minuscula de mayuscula
 ```java
 msg.equalsIgnoreCase("hello world"); // true
 ```
+
+### getBytes() byte []
+
+Imprime los digitos del codigo ascii de la cadena
+
+```java
+Arrays.toString(msg.getBytes())
+// [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+```
+
+### hashCode() int
+Retorna el codigo hash de la cadena, es unico por cada cadena diferente
+
+```java
+msg.hashCode(); // //-862545276
+```
+
+### indexOf(String str) int
+
+Retorna el indice donde comienza la subcadena en caso de que no exista la subacadena retorna -1
+
+```java
+msg.indexOf("World"); // 6
+```
+
+### indexOf(char character) int
+
+Retorna el indice donde comienza la subcadena en caso de que no exista la subacadena retorna -1
+
+```java
+msg.indexOf('W'); // 6
+```
+
+### isBlank() boolean
+
+Saber si un string esta en blanco
+
+```java
+StringUtils.isBlank(null); // true
+"".isBlank();              // true  
+" ".isBlank();             // true  
+"bob".isBlank();           // false  
+"  bob  ".isBlank();       // false
+```
+
+### isEmpty() boolean
+
+Saber si un string esta vacio
+
+```java
+StringUtils.isEmpty(null); // true
+"".isEmpty();              // true  
+" ".isEmpty();             // false  
+"bob".isEmpty();           // false  
+"  bob  ".isEmpty();       // false
+```
