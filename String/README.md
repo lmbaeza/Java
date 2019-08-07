@@ -8,9 +8,31 @@
 * [codePoints() IntStream](#)
 * [chars() IntStream](#)
 * [compareTo(String anotherString) int](#)
-* [](#)
-* [](#)
-* [](#)
+* [compareToIgnoreCase(String anotherString) int](#)
+* [concat(String str) String](#)
+* [contains(String str) boolean](#)
+* [endsWith(String str) boolean](#)
+* [equals(String str) boolean](#)
+* [equalsIgnoreCase(String str) String](#)
+* [getBytes() byte []](#)
+* [hashCode() int](#)
+* [indexOf(String str) int](#)
+* [indexOf(char character) int](#)
+* [isBlank() boolean](#)
+* [isEmpty() boolean](#)
+* [lastIndexOf(String str) int](#)
+* [lastIndexOf(char character) int](#)
+* [lines() Stream<String>](#)
+* [matches(String regex) boolean](#)
+* [replace(String oldStr, String newStr) String](#)
+* [replace(char oldChar, char newChar) String](#)
+* [replaceAll(String str) String](#)
+* [split(String str) String[]](#)
+* [substring(int from, int to) String](#)
+* [substring(int from) String](#)
+* [toCharArray() char[]](#)
+* [toLowerCase() String](#)
+* [toUpperCase() String](#)
 
 ### Setup
 ```java
@@ -244,5 +266,70 @@ Reemplazar el caracter 'H' por 'h'
 ```java
 msg.replace('H', 'h'); // hello World
 ```
+
+### replaceAll(String str) String
+
+Reemplazar todas las subcadenas 'Hello' por 'Hola' en una cadena
+
+```java
+String msg3 = "Hello World Hello World";
+msg3.replaceAll("Hello", "Hola"); // Hola World Hola World
+```
+
+### split(String str) String[]
+
+Dividir una cadena
+
+```java
+String[] arrStr1 = msg3.split(" ");
+        
+for(String x: arrStr1) {
+    out.print(x + " <> ");
+}
+// Hello <> World <> Hello <> World <>
+```
+
+### substring(int from, int to) String
+
+Imprime la subcadena desde el rango `from` hasta el `to`
+
+```java
+msg.substring(6, 11); // World
+```
+
+
+### substring(int from) String
+
+Imprime la subcadena desde el rango `from` hasta el final de la cadena
+
+```java
+msg.substring(2); // llo World
+```
+
+### toCharArray() char[]
+
+Retorna el Array de caracteres de la cadena
+
+```java
+Arrays.toString(msg.toCharArray());
+// [H, e, l, l, o,  , W, o, r, l, d]
+```
+
+### toLowerCase() String
+
+Pasar todos los caracteres de la cadena a minuscula
+
+```java
+msg.toLowerCase(); // hello world
+```
+
+### toUpperCase() String
+
+Pasar todos los caracteres de la cadena a mayuscula
+
+```java
+msg.toUpperCase(); // HELLO WORLD
+```
+
         
         
